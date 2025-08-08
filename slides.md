@@ -1,7 +1,7 @@
 ---
 theme: seriph
 background: https://cover.sli.dev
-title: Welcome to Slidev
+title: Урок 3 Python backend
 class: text-center
 drawings:
   persist: false
