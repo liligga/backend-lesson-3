@@ -35,8 +35,10 @@ mdc: true
 <v-clicks>
 
 - `git branch` - список веток
-- `git checkout -b branch_name` - создание новой ветки и переход на неё
-- `git switch branch_name` - переход на уже существующую ветку
+- `git checkout -b branch_name` - создание новой ветки branch_name и переход на неё
+- `git checkout branch_name` - переход на уже существующую ветку branch_name
+- `git switch -c branch_name` - создание новой ветки branch_name и переход на неё
+- `git switch branch_name` - переход на уже существующую ветку branch_name
 - `git merge branch_name` - слияние ветки(соединение одной ветки с другой)
 - `git push origin branch_name` - отправка ветки на удаленный репозиторий(если нужно, чтобы ваша ветка была видна другим)
 
@@ -131,6 +133,34 @@ class Car:
 При попытке присвоить неправильное значение выше будет выброшено исключение(`ValueError`)
 
 ---
+
+### Инкапсуляция в Python
+
+Пример с `@property`:
+
+```python
+class Car:
+    def __init__(self, max_speed):
+        self.max_speed = max_speed
+        self.__speed = 0  # Приватный атрибут
+
+    @property
+    def speed(self):
+        # getter
+        return self.__speed
+
+    @speed.setter
+    def speed(self, value):
+        # setter
+        if value > self.max_speed:
+            raise ValueError("Скорость не может быть больше максимальной")
+        else:
+            self.__speed = value
+```
+
+При попытке присвоить неправильное значение выше будет выброшено исключение(`ValueError`)
+
+---
 layout: two-cols
 ---
 
@@ -162,10 +192,12 @@ class Animal(ABC):
 
 class Dog(Animal):
     def make_sound(self):
+        # Реализация абстрактного метода
         print("Собака лает")
 
 class Cat(Animal):
     def make_sound(self):
+        # Реализация абстрактного метода
         print("Кошка мяукает")
 
 dog = Dog()
@@ -205,5 +237,11 @@ cat.make_sound()
 - [Паттерны программирования](https://refactoring.guru/ru/design-patterns/catalog)
 - [Паттерны с примерами](https://habr.com/ru/articles/930094/)
 
+Более продвинутые статья про атрибуты в Python:
+- [Статья #1](https://habr.com/ru/companies/otus/articles/896190/)
+- [Статья #2](https://habr.com/ru/companies/otus/articles/889754/)
+
+Про протоколы в Python:
+- [Статья #1](https://habr.com/ru/companies/wunderfund/articles/751424/)
 
 Штуки со знаком @ - это декораторы. Они используются для добавления дополнительной функциональности к функции или классу. Пройдем их позже.
