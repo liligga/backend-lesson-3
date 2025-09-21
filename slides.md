@@ -224,7 +224,7 @@ cat.make_sound()
 > Каждый конкретный класс обязан переопределить абстрактный метод make_sound. Это называется реализацией абстрактного метода. То есть конкретные классы реализуют методы абстрактного класса.
 
 ---
-layout: two-cols
+layout: two-cols-header
 ---
 
 ### Общее
@@ -232,20 +232,25 @@ layout: two-cols
 Все принципы ООП помогают сделать код более понятным и поддерживаемым.
 Также есть более сложные принципы дизайна программного обеспечения - принципы SOLID.
 Также есть паттерны программирования, связанные с ООП, которые помогают решать определенные задачи.
+
 Полезные ссылки:
+
+::left::
 
 - [Принципы SOLID](https://solidbook.vercel.app/)
 - [Про SOLID с примерами](https://habr.com/ru/companies/otus/articles/651753/)
 - [Паттерны программирования](https://refactoring.guru/ru/design-patterns/catalog)
 - [Паттерны с примерами](https://habr.com/ru/articles/930094/)
 
+Штуки со знаком @ - это декораторы. Они используются для добавления дополнительной функциональности к функции или классу.
+
 ::right::
 
 Более продвинутые статья про атрибуты в Python:
 - [Статья #1](https://habr.com/ru/companies/otus/articles/896190/)
 - [Статья #2](https://habr.com/ru/companies/otus/articles/889754/)
+- [Статья #3](https://habr.com/ru/companies/otus/articles/801595/)
+- [Статья #4](https://konstantinklepikov.github.io/myknowlegebase/notes/python-descriptors.html)
 
 Про протоколы в Python:
 - [Статья #1](https://habr.com/ru/companies/wunderfund/articles/751424/)
-
-Штуки со знаком @ - это декораторы. Они используются для добавления дополнительной функциональности к функции или классу.
